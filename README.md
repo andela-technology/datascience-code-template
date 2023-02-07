@@ -18,10 +18,8 @@ Here are some of the features the package format setups up automatically.
 * ✅ **Automatically sets the python package version** from the git tag. If a git tag is not preset then the latest git commit hash is used.
 * ✅ **Linting/formatting** are automatically setup using [`tox`](https://tox.wiki/en/latest/).
 * ✅ Isolated builds with [`tox`](https://tox.wiki/en/latest/).
-* ✅ **Debugging** with vscode.
 * ✅ Example **unit tests**.
 * ✅ Example **command line entry point**.
-* ✅ Example **parameter config file** (which is loaded via a `--run-config` argument).
 * ✅ [pre-commit](https://pre-commit.com) **git hooks**.
 
 ## Usage
@@ -30,12 +28,12 @@ You can read the templates directly from git without downloading them you do nee
 argument to select the template. An example below,
 
 ```sh
-cookiecutter git+ssh://git@github.com/andela-technology/ds-code-template --directory basic-template
+cookiecutter git+ssh://git@github.com/andela-technology/datascience-code-template --directory basic-template
 ```
 
 ## Example
 
-Here we show the steps need to create an example package called `algo-cat-tracker`.
+Here we show the steps need to create an example package called `cat-tracker`.
 
 ```sh
 
@@ -54,7 +52,7 @@ cd cat_tracker
 git init . && git add -A && git commit -am "Initial Commit"
 
 # after you make a virtualenv install and build the package
-pip install ".[dev]"
+poetry install
 
 # run linting/formatting/tests
 tox
