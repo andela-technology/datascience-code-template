@@ -51,6 +51,8 @@ cd cat_tracker
 #❗ NOTE: You must do this step or the generated package won't build.
 git init . && git add -A && git commit -am "Initial Commit"
 
+# If you do not have poetry on your computer, run (MacOS) 
+brew install poetry
 # after you make a virtualenv install and build the package
 poetry install
 
